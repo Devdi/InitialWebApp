@@ -9,14 +9,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by devdi on 3/1/14.
  */
 @Controller
-@RequestMapping("/welcome")
+@RequestMapping("/")
 public class HomeController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String printWelcome(ModelMap model) {
         model.addAttribute("message", "Make it happen");
         return "home";
-
     }
 
 }
